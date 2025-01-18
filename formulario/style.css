@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Libre Baskerville", serif;
+}
+
+body {
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 1.25rem; /* Aproximadamente 20px */
+  background-color: rgb(238, 239, 241);
+  color: rgb(176, 228, 63); /* Cor do texto */
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(229, 38, 144);
+  font-size: 1.5rem;
+  margin: 40px 0;
+}
+
+form {
+  width: 100%;
+}
+.form-group {
+  margin-bottom: 1rem; /* Aproximadamente 15px */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem; /* Aproximadamente 8px */
+  font-weight: bold;
+  font-size: 1.2rem; /* Tamanho da fonte dos rótulos */
+}
+.form-group input {
+  width: 100%;
+  padding: 0.75rem; /* Aproximadamente 12px */
+  box-sizing: border-box;
+  border: 0.125rem solid rgb(229, 38, 144); /* Borda rosa */
+  border-radius: 0.3125rem; /* Aproximadamente 5px */
+  background-color: white; /* Fundo claro para contraste */
+  color: rgb(31, 41, 55); /* Texto escuro para visibilidade */
+  font-size: 1rem; /* Aumenta o tamanho do texto */
+}
+.form-group input:focus {
+  outline: none;
+  border-color: rgb(176, 228, 63); /* Borda verde ao focar */
+}
+.form-group button {
+  padding: 0.75rem 1rem; /* Aproximadamente 12px 16px */
+  background-color: rgb(229, 38, 144); /* Fundo rosa */
+  color: white; /* Texto branco */
+  border: none;
+  border-radius: 0.3125rem; /* Aproximadamente 5px */
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem; /* Aumenta o tamanho do texto */
+}
+.form-group button:hover {
+  background-color: rgb(176, 228, 63);
+  color: rgb(31, 41, 55);
+}
+.error {
+  color: red;
+  font-size: 0.9rem;
+}
+
+.home-button-container a {
+  margin-top: 20px;
+  color: rgb(229, 38, 144);
+  font-size: 20px;
+  cursor: pointer;
+}
+.home-button-container a:hover {
+  color: rgb(176, 228, 63);
+}

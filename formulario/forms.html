@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Formulário Simples</title>
+  </head>
+  <body>
+    <section>
+      <h2>Formulário de cadastro Blog Koru</h2>
+      <form id="form" onsubmit="validaTeForm(event)">
+        <div class="form-group">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" />
+          <div id="nameError" class="error"></div>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" />
+          <div id="emailError" class="error"></div>
+        </div>
+        <div class="form-group">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+      <span class="home-button-container">
+        <a class="home-button" href="../home/index.html">
+          Voltar a página inicial
+        </a>
+      </span>
+    </section>
+    <script src="script.js" defer></script>
+  </body>
+</html>

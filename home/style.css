@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Libre Baskerville", serif;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background-color: rgb(238, 239, 241);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 32px 16px 0 16px;
+}
+
+/* Header  */
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.header-top-texts {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-top-texts p {
+  font-size: 0.8rem;
+  color: rgb(229, 38, 144);
+}
+
+.title-container {
+  width: 100%;
+  margin-top: 15px;
+  padding: 20px 0;
+  border-top: 2px solid rgb(229, 38, 144);
+  border-bottom: 2px solid rgb(229, 38, 144);
+}
+
+.title-container h1 {
+  color: rgb(176, 228, 63);
+  font-size: 3rem;
+}
+
+/* Classes Cards */
+
+.first-article {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 32px;
+  gap: 18px;
+}
+
+.first-article div {
+  padding: 12px;
+  text-align: center;
+}
+
+/* Seleciona o primeiro card com info sobre as aulas */
+.first-article > div:first-child {
+  background-color: rgb(176, 228, 63);
+}
+
+/* Seleciona o segundo card com info sobre as aulas */
+.first-article > div:nth-child(2) {
+  background-color: rgb(229, 38, 144, 0.8);
+  color: #ffffff;
+}
+
+/* Seleciona o terceiro card com info sobre as aulas */
+.first-article > div:last-child {
+  background-color: rgb(176, 228, 63);
+}
+
+/* Estilos para o título <h2> dentro de cada <div> do <article> */
+.first-article div h2 {
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+/* Estilos para o primeiro <p> dentro de cada <div> em um <article> */
+.first-article div p:nth-of-type(1) {
+  font-size: 1.125rem;
+}
+
+/* Estilos para o segundo <p> dentro de cada <div> do <article> */
+.first-article div p:nth-of-type(2) {
+  font-size: 0.875rem; /* Define o tamanho da fonte como 0.875rem */
+}
+
+/* Estilos para o terceiro e quarto <p> dentro de cada <div> em um <article> */
+.first-article div p:nth-of-type(3),
+.first-article div p:nth-of-type(4) {
+  font-size: 0.75rem;
+}
+
+/* Estilos adicionais para o terceiro <p> dentro de cada <div> em um <article> */
+.first-article div p:nth-of-type(3) {
+  margin-top: 0.25rem;
+}
+
+.second-article span {
+  margin-top: 20px;
+}
+
+.second-article a {
+  width: 100%;
+  color: rgb(229, 38, 144);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.second-article a:hover {
+  color: rgb(176, 228, 63);
+}
+
+/* Main Content */
+
+.second-article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.second-article img {
+  margin-top: 2rem;
+  max-width: 100%;
+}
+
+.second-article h2 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.second-article-texts-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: flex-start;
+}
+
+.second-article-texts-container p,
+.content-container aside {
+  flex: 1; /* Faz os filhos ocuparem o mesmo espaço */
+}
+
+aside {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+}
+
+aside img {
+  width: 100%;
+  margin-top: 0px !important; /*remove o margin que está sendo adicionada a imagem*/
+}
+
+.aside-text-container {
+  text-align: center;
+  padding: 15px;
+  background-color: rgb(229, 38, 144, 0.6);
+  color: #ffffff;
+}
+
+.aside-title {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 2px solid rgb(229, 38, 144);
+  padding-bottom: 10px;
+}
+
+/* Media Queries para responsividade */
+
+@media (max-width: 768px) {
+  /* Para tablets e dispositivos menores */
+
+  .first-article {
+    grid-template-columns: repeat(2, 1fr); /* Muda para 2 colunas */
+  }
+
+  .second-article-texts-container {
+    flex-direction: column; /* Empilha os elementos */
+    gap: 1rem;
+  }
+
+  aside {
+    width: 100%; /* Ajusta a largura do aside */
+  }
+
+  .second-article h2 {
+    font-size: 1.25rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .title-container h1 {
+    font-size: 2.25rem; /* Diminui o título */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Para dispositivos móveis */
+
+  .first-article {
+    grid-template-columns: 1fr; /* Muda para 1 coluna */
+  }
+
+  .second-article h2 {
+    font-size: 1.125rem; /* Diminui o tamanho da fonte */
+  }
+
+  .second-article a {
+    font-size: 1rem; /* Diminui o tamanho da fonte */
+  }
+
+  .second-article-texts-container {
+    gap: 2rem;
+  }
+
+  .second-article img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura */
+  }
+
+  footer {
+    flex-direction: column; /* Empilha os elementos do footer */
+    align-items: center;
+    text-align: center;
+  }
+}
